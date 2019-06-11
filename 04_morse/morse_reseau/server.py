@@ -12,7 +12,7 @@ while True:
     socket.listen()
     print("en écoute...")
 
-    thread = network.newThread(socket.accept)
+    thread = network.newThread(socket.accept())
     thread.start()
     #notre communication
 

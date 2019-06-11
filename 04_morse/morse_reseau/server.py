@@ -9,7 +9,7 @@ socket = network.newServerSocket()
 socket.bind((ADDRESS,PORT))
 
 while True: 
-    socket.listen()
+    socket.listen(10)
     print("en écoute...")
 
     thread = network.newThread(socket.accept())

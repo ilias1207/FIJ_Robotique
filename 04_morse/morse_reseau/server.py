@@ -21,6 +21,7 @@ while True:
 
     print("message reçu : ", morse)
     lettre = comMorse.decode(morse)
+    
     print ("message traduit: ", lettre)
     ledArduino.envoieCaractere(lettre)
 

@@ -23,7 +23,7 @@ liste_mots = [
 ]
 
 #dico des stades du pendu
-chances = {  7:["____ ",
+chances = {  7:["_____",
                 "|/",
                 "|",
                 "|",
@@ -43,7 +43,7 @@ chances = {  7:["____ ",
                 "|____"],
              4:["____ ",
                 "|/  |",
-                "|  \\o/",
+                "|  \\o",
                 "|",
                 "|",
                 "|____"],
@@ -63,13 +63,13 @@ chances = {  7:["____ ",
                 "|/ |",
                 "| \\o/",
                 "|  |",
-                "|  /",
+                "| /",
                 "|____"],
              0:["____ ",
                 "|/ |",
                 "| \\o/",
                 "|  |",
-                "|  / \\",
+                "| / \\",
                 "|____"],
             
 }
@@ -82,9 +82,10 @@ def pendu (chance=0):
 # fonction qui masque les lettre sauf celles deja trouvee passee en parametre
 def masque (mot_a_trouver,lettres_trouvees):
    mot_masque=""
-   for element in mot_a_trouver :
-      mot_masque += lettre 
+   for lettre in mot_a_trouver :
+      if lettre in lettres_trouvees :
+         mot_masque += lettre 
    
-   else
-   
+      else:
+         mot_masque +="*"
    return mot_masque   
